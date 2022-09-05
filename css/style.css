@@ -3,26 +3,26 @@
 #header {
   /* 헤더 */
   width: 100%;
-  height: 80px;
-  background-color: #081a1d;
+  height: 94px;
+  background-color: #13151A;
 }
 #cont_left {
   /* 왼쪽 바  */
   float: left;
-  width: 95px;
-  height: 1024px;
-  background-color: #081a1d;
+  width: 184px;
+  height: 100vh;
+  background-color: #13151A;
 }
 #cont_center {
   /* 가운데 작업 공간, 흰색 바탕 */
-  height: 969px;
+  height: 100vh;
 }
 #nodes {
   /* 노드 리스트 제목부터, 리스트, 밑에 쇼차트 버튼까지 */
   position: absolute;
   width: 510px;
   height: 853px;
-  left: 106px;
+  left: 190px;
   top: 132px;
 }
 #shownodes {
@@ -30,7 +30,7 @@
   padding-left: 50px;
   position: absolute;
   width: 510px;
-  height: 608px;
+  height: 70vh;
   left: 0px;
   top: 87px;
   overflow-y: scroll;
@@ -193,7 +193,7 @@
   height: 63px;
 
 
-  background-color: #081A1D;
+  background-color: #13151A;
   border-radius: 40px;
   font-family: 'sans-serif';
   font-style: normal;
@@ -208,7 +208,7 @@
 #showbutton {
   position: absolute;
   left: 92px;
-  top:750px;
+  top: 80vh;
 }
 
 #showchart:hover {
