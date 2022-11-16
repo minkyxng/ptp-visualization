@@ -36,7 +36,7 @@
       <div id="cont_center">
         <div id="nodes">
           <p id="nodeletter">
-            <b>nodes</b>
+            <b>nodelist</b>
           </p>
           <div id="shownodes">
             <div class="nodeframe">
@@ -292,32 +292,7 @@
             </div>
             <div id="showmychart">
             </div>
-
             <script type="text/javascript">
-
-              // d3.csv("./csv/ptpTime5min_15.csv").then(function (data) {
-              //   console.log(data);
-              // });
-              // console.log(data["Master Offset"]);
-
-
-              // var offset_js = "{{ offset }}";
-              // offset_js = offset_js.replace("[", "");
-              // offset_js = offset_js.replace("]", "");
-              // var realtime_js = "{{ timestamp }}";
-              // realtime_js = realtime_js.replace("[", "");
-              // realtime_js = realtime_js.replace("]", "");
-
-
-              // var arr_offset_js = offset_js.split(',');
-              // var arr_int_offset = arr_offset_js.map(function (item) {
-              //   return parseInt(item, 10);
-              // });
-
-              // var arr_realtime_js = realtime_js.split(',');
-              // var arr_int_realtime = arr_realtime_js.map(function (item) {
-              //   return parseInt(item, 10);
-              // });
 
 
 
@@ -326,42 +301,52 @@
             //  var OFFSET2 =
                // [679, 1537, 900, -714, 332, -221, -124, 500, -198, -165, 117, 1116, -549, -370, -295, -6155, 6124, 2113, 361, -550, -832, -1114, 443, -891, 283, 898, -817, -116, 545, 520, -711, 530, -207, 50, 20, 183, -135, -90, 1004, 65, -114, -455, -841, 110, -43, 736, 217, -1104, 214, -764, 128, 415, 1075, -514, -91, -7002, 7231, 2150, -164, -1259, -444, 184, 33, -487, -48, -559, 919, -839, -54, 576, 418, 72, -382, -58, -74, 715, -784, 105, 89, -191, -96, 230, 1013, -1264, 17, 194, -692, 663, -848, 943, -572, -18, 148, -158, 880, -343, -12, -381, 29, 185, -205, 1274, -685, 78, -111, -748, 126, -347, 2, 455, 249, -379, 1272, -575, 107, -556, -113, -327, 385, 346, -291, -1, 1264, -38, -992, -288, 163, -309, 735, -521, -28, 257, 361, -252, 136, 450, -812, 303, 12, -165, 25, 145, 316, -510, 21, -84, 278, 189, 347, -970, 130, 604, -839, 192, -86, 618, -860, 56, 278, 1277, -848, -477, -242, 1005, -655, 197, -464, 293, -335, 1158, -855, 600, -417, 344, -226, 36, 185, -362, 84, 593, -667, -523, 313, -219, 867, -377, -195, 336, 60, 535, 17, -625, -537, 559, -808, 286, -2, 1115, -732, 105, -488, 35, -495, 609, 880, -52, -440, 580, -626, 300, 474, -978, 697, -56, -837, -74, 513, 62, 54, -399, -217, 1129, -291, -361, -92, -176, -6, -274, 185, 780, 298, -1052, -218, 396, 1016, -523, -606, -147, 1062, -873, 185, 827, -711, 489, -1234, 382, -486, 118, 160, 339, 765, -20, -522, 198, -125, -502, 170, 307, -542, 266, 658, -118, -1123, 969, 159, -297, - 315, -88, 1353, -445, -787, 467, -668, 292, -478, -174, 1093, -240, -148, -923, 632, -10, -242, 401, 374, -28, 155, 118, -124, -416, 277, 88, 962, -504, -1029, -140, 441, 544, -149, -550, -24, -137, 680, -116, -562, 463, -169, -502, -527, 1445, -438, 97, -168, 233, 192, 35, 203, 346, -518, 23, 279, -43, -167, -1170, 355, -6570, 6916, 2262, 44, -901, 124, -901, -474, 6, -421, -226, 1190, 153, -527, -577, -201, 193, 130, 169, -311, 971, -336, -535, -6209, 6736, 1246, -126, -440, -933, -480, 511, -630, 296, 57, -159, 782, -670, -139, 874, 129, -642, -37, -87, -83, 590, -457, -115, 458, -226, -827, 220, 56, -116, 1061, -43, -761, 1013, -927, 657, -411, -20, -422, 476, 50, 187, 126, 118, 363, -157, 12, -259, -6826, 6715, 1826, -175, -938, -154, -655, 76, 467, -699, 341, -221, -363, -302, 586, -269, 215, 125, 604, 437, -1294, 306, -167, 328, -329, -228, 477, 233, -715, 659, -496, 166, -280, 1330, -118, -465, -59, -951, 101, 354, -51, 200, -350, 317, 414, -205, //-176, 255, -219, 208, -733, 427, -602, -88, 625, -348, 1026, 52, -1034, 673, -287, -435];
 
-
+              console.time('line');
               Highcharts.chart('showmychart', {
 
-                // tooltip: {
-                //   formatter: function () {
-
-                //     return 'Time : <b>' + this.x + '/s </b>' + ' Offset : <b>' + this.y + '</b>';
-                //   },
-                //   padding: 17,
-                // },
+                chart: {
+                  zoomType: 'x',
+                  backgroundColor: 'white',
+                  type: 'line'
+                },
 
                 title: {
                   text: 'PTP: Synchronization time graph',
                   align: 'center'
                 },
 
+                subtitle: {
+                  text: 'offset graph'
+                },
+
+                accessibility: {
+                  screenReaderSection: {
+                    // beforeChartFormat: '<{headingTagName}>{chartTitle}</{headingTagName}><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{xAxisDescription}</div><div>{yAxisDescription}</div>'
+                  }
+                },
+
+                tooltip: {
+                  valueDecimals: 0
+                },
+
+                // legend: {
+                //   layout: 'vertical',
+                //   align: '',
+                //   verticalAlign: 'middle'
+                // },
+
+                xAxis: {
+                  type: 'datetime'
+                },
+
                 yAxis: {
                   title: {
                     text: 'Offset From Master'
                   },
-                  tickAmount: 10,
+                  tickAmount: 14,
                   labels: {
-                    format: '{value} μs'
+                    format: '{value} ns'
                   },
-                },
-
-                xAxis: {
-                  accessibility: {
-                    rangeDescription: 'Time : 0 - 7min'
-                  }
-                },
-
-                legend: {
-                  layout: 'vertical',
-                  align: 'right',
-                  verticalAlign: 'middle'
                 },
 
                 plotOptions: {
@@ -373,34 +358,14 @@
                   }
                 },
 
-                series: [
-                  {
-                    name: 'Node2 Offset',
-                    data: OFFSET,
-                  }
-                  // },
-                  // {
-                  //   name: 'Node3 Offset',
-                  //   data: OFFSET2,
-                  // }
-                ],
-
-                responsive: {
-                  rules: [{
-                    condition: {
-                      maxWidth: 2000
-                    },
-                    chartOptions: {
-                      legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                      }
-                    }
-                  }]
-                }
+                series: [{
+                  data: OFFSET,
+                  lineWidth: 1,
+                  name: 'node'
+                }]
 
               });
+              console.timeEnd('line');
 
 
             </script>
@@ -409,9 +374,6 @@
         </div>
 
       </div>
-
-      <!-- <div id="cont_right">
-      </div> -->
     </div>
   </div>
 

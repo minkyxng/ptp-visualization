@@ -23,7 +23,7 @@
   width: 510px;
   height: 853px;
   left: 10%;
-  top: 10%;
+  top: 15%;
 }
 #shownodes {
   /* 노드 리스트 부분만, 크기위치 고정에 더 커지면 스크롤 */
@@ -57,7 +57,7 @@
   position: absolute;
   width: 700px;
   height: 853px;
-  left: 110%;
+  left: 140%;
   top: 0%;
 }
 #showmychart{
